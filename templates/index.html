@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成就管理系統</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 左側導航欄 -->
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="/static/images/logo.jpg" alt="LINE@出門逗鬧熱">
+                <span>LINE@出門逗鬧熱</span>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#" class="nav-link collapsed">
+                        <span>活動資訊管理</span>
+                        <span class="nav-indicator">&lt;</span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="nav-link" data-page="activity-list">活動清單列表</a></li>
+                        <li><a href="#" class="nav-link" data-page="activity-add">新增活動項目</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link collapsed">
+                        <span>基本資訊管理</span>
+                        <span class="nav-indicator">&lt;</span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link collapsed">
+                                <span>管理員</span>
+                                <span class="nav-indicator">&lt;</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="#" class="nav-link" data-page="admin-list">人員清單列表</a></li>
+                                <li><a href="#" class="nav-link" data-page="admin-edit">基本資料修改</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link collapsed">
+                                <span>集點卡</span>
+                                <span class="nav-indicator">&lt;</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="#" class="nav-link" data-page="gift-list">禮品清單列表</a></li>
+                                <li><a href="#" class="nav-link" data-page="gift-edit">禮品資訊編輯</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link collapsed">
+                                <span>活動任務</span>
+                                <span class="nav-indicator">&lt;</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="#" class="nav-link" data-page="task-list">任務清單列表</a></li>
+                                <li><a href="#" class="nav-link" data-page="task-edit">任務資訊編輯</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link collapsed">
+                                <span>活動成就</span>
+                                <span class="nav-indicator">&lt;</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="#" class="nav-link" data-page="achievement-list">成就清單列表</a></li>
+                                <li><a href="#" class="nav-link" data-page="achievement-edit">成就資訊編輯</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link collapsed">
+                                <span>玩家資訊</span>
+                                <span class="nav-indicator">&lt;</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="#" class="nav-link" data-page="player-list">玩家清單列表</a></li>
+                                <li><a href="#" class="nav-link" data-page="player-edit">玩家資訊編輯</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link collapsed">
+                        <span>遊戲歷程管理</span>
+                        <span class="nav-indicator">&lt;</span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="nav-link" data-page="game-history">玩家遊戲歷程</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- 主要內容區 -->
+        <main class="main-content">
+            <!-- 頂部導航欄 -->
+            <div class="top-nav">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+                <div class="user-role">後台資訊管理者</div>
+            </div>
+            <iframe id="contentFrame" class="content-frame" src="{{ url_for('render_page', page_name='blank') }}" title="Content Frame"></iframe>
+        </main>
+    </div>
+    <script type="module" src="/static/js/main.js"></script>
+</body>
+</html>
+
